@@ -7,9 +7,8 @@ const fs = require('fs');
 
 // `.env` を確実に読み込む
 require('dotenv').config({ path: path.join(app.getAppPath(), '.env') });
-
 // GitHub Releases の URL
-const feedURL = 'https://update.electronjs.org/ccmsh/NobaTor/${process.platform}-${process.arch}';
+const feedURL = `https://update.electronjs.org/ccmsh/NobaTor/${process.platform}-${process.arch}`;
 
 let win;
 

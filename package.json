@@ -36,13 +36,13 @@
       }
     ],
     "win": {
-      "icon": "build/icon.ico",
+      "icon": "icon.ico",
       "target": [
         "nsis"
       ]
     },
     "mac": {
-      "icon": "build/icon.icns"
+      "icon": "icon.icns"
     },
     "nsis": {
       "oneClick": false,

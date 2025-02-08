@@ -1,7 +1,7 @@
 require("dotenv").config();
 module.exports = {
   packagerConfig: {
-      icon: "./build/icon", // アイコン指定（拡張子なしで、Winは.ico, Macは.icns）
+      icon: "./icon", // アイコン指定（拡張子なしで、Winは.ico, Macは.icns）
   },
   rebuildConfig: {},
   makers: [

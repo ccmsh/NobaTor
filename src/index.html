@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NobaTor</title>
+    <!-- Bootstrap CSS -->
+    <link rel="shortcut icon" href="https://nobazine.nbm.f5.si/images/avatar_hu0b942d2714472d2dbd10790626981140_19376_300x0_resize_box_3.png" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=M+PLUS+1p&display=swap" rel="stylesheet">
+    <link href="../node_modules/easymde/dist/easymde.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+
+<body>
+    <input hidden type="file" id="imageInput" accept="image/*">
+    <div>
+        <button class="button" onclick="selectImage()">画像ToURL</button>
+        <button class="button" onclick="calculateToNowPrice()">金額を計算</button>
+        <button class="button" id="sendButton">投稿</button>
+        <p id="nowprice">現在の記事に対する報酬金額を取得するには「金額を計算」ボタンを押してください</p>
+    </div>
+    <textarea id="editor"></textarea>
+    <!-- Bootstrap JS -->
+    <script src="../node_modules/bootstrap/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="../node_modules/easymde/dist/easymde.min.js"></script>
+    <script src="./js/index.js"></script>
+    <script src="../renderer.js"></script>
+</body>
+
+</html>

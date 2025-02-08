@@ -14,6 +14,7 @@ module.exports = {
         setupExe: "NobaTorSetup.exe", // インストーラー名
         setupIcon: "./icon.ico", // アイコン
         noMsi: true, // MSIインストーラーを作らない
+        alwaysCreate: true, // Always create
         shortcutName: "NobaTor", // スタートメニューのショートカット名
       },
     },

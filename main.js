@@ -3,7 +3,7 @@ const prompt = require('electron-prompt');
 const axios = require('axios');
 const path = require('path');
 const fs = require('fs');
-const { createWindow } = require('./window'); // ウィンドウ作成用モジュール（アプリに合わせて調整）
+// const { createWindow } = require('./window'); // ウィンドウ作成用モジュール（アプリに合わせて調整）
 
 // `.env` を確実に読み込む
 require('dotenv').config({ path: path.join(app.getAppPath(), '.env') });

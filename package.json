@@ -13,9 +13,10 @@
   "license": "ISC",
   "description": "",
   "build": {
-    "asar": {
-      "unpack": ".env"
-    },
+    "asar": true,
+    "asarUnpack": [
+      ".env"
+    ],
     "appId": "net.cocamush.nobator",
     "productName": "NobaTor",
     "files": [

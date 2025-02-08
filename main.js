@@ -1,5 +1,5 @@
 const dotenv = require('dotenv');
-const { app, BrowserWindow, ipcMain, autoUpdater } = require('electron');
+const { app, BrowserWindow, ipcMain, autoUpdater, Notification } = require('electron');
 const prompt = require('electron-prompt');
 const axios = require('axios');
 const path = require('path');
@@ -10,7 +10,7 @@ const fs = require('fs');
 dotenv.config({ path: path.join(app.getAppPath(), '.env') });
 // GitHub Releases の URL
 const feedURL = `https://update.electronjs.org/ccmsh/NobaTor/${process.platform}-${process.arch}`;
-alert(process.env.DISCORD_URL);
+console.log();
 let win;
 
 // アップデートの確認
@@ -68,7 +68,7 @@ ipcMain.handle('send-discord-message', async (_, message) => {
     console.log(`📩 受信メッセージ: ${message}`);
 
     try {
-        const webhookURL = process.env.DISCORD_URL;
+        const webhookURL = "https://discord.com/api/webhooks/1337627738063900774/26F-ZtzmT-J2T3uTfXqcJGEH8OGx5o-MoI68b1C52f5put_0Rh7ui4CZEPKO3gJARxW5";
         if (!webhookURL) throw new Error('DISCORD_URL が設定されていません');
 
         await axios.post(webhookURL, message);

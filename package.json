@@ -16,6 +16,23 @@
   "config": {
     "forge": "./forge.config.js"
   },
+  "build": {
+      "appId": "net.cocamush.nobator",
+      "productName": "NobaTor",
+      "publish": [
+        {
+          "provider": "github",
+          "owner": "ccmsh",
+          "repo": "NobaTor"
+        }
+      ]
+  },
+  "win": {
+    "icon": "icon.ico"
+  },
+  "mac": {
+    "icon": "icon.icns"
+  },  
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0",
     "@electron-forge/maker-deb": "^6.0.0",
@@ -32,6 +49,7 @@
     "dotenv": "^16.4.7",
     "easymde": "^2.18.1-177.0",
     "electron-prompt": "^1.7.0",
+    "electron-updater": "^6.3.9",
     "path": "^0.12.7"
   }
 }

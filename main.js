@@ -1,3 +1,4 @@
+const dotenv = require('dotenv');
 const { app, BrowserWindow, ipcMain, autoUpdater } = require('electron');
 const prompt = require('electron-prompt');
 const axios = require('axios');
@@ -6,10 +7,10 @@ const fs = require('fs');
 // const { createWindow } = require('./window'); // ウィンドウ作成用モジュール（アプリに合わせて調整）
 
 // `.env` を確実に読み込む
-require('dotenv').config({ path: path.join(app.getAppPath(), '.env') });
+dotenv.config({ path: path.join(app.getAppPath(), '.env') });
 // GitHub Releases の URL
 const feedURL = `https://update.electronjs.org/ccmsh/NobaTor/${process.platform}-${process.arch}`;
-
+alert(process.env.DISCORD_URL);
 let win;
 
 // アップデートの確認

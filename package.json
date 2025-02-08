@@ -13,13 +13,17 @@
   "license": "ISC",
   "description": "",
   "build": {
-    "asar": false,
+    "asar": {
+      "unpack": ".env"
+    },
     "appId": "net.cocamush.nobator",
     "productName": "NobaTor",
     "files": [
       "dist/**/*",
       "src/**/*",
       "main.js",
+      "preload.js",
+      "renderer.js",
       "package.json"
     ],
     "extraFiles": [

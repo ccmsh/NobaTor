@@ -17,22 +17,41 @@
     "forge": "./forge.config.js"
   },
   "build": {
-      "appId": "net.cocamush.nobator",
-      "productName": "NobaTor",
-      "publish": [
-        {
-          "provider": "github",
-          "owner": "ccmsh",
-          "repo": "NobaTor"
-        }
+    "appId": "net.cocamush.nobator",
+    "productName": "NobaTor",
+    "files": [
+      "dist/**/*",
+      "src/**/*",
+      "main.js",
+      "package.json"
+    ],
+    "directories": {
+      "output": "build"
+    },
+    "publish": [
+      {
+        "provider": "github",
+        "owner": "ccmsh",
+        "repo": "NobaTor"
+      }
+    ],
+    "win": {
+      "icon": "icon.ico",
+      "target": [
+        "nsis"
       ]
+    },
+    "mac": {
+      "icon": "icon.icns"
+    },
+    "nsis": {
+      "oneClick": false,
+      "allowToChangeInstallationDirectory": true,
+      "installerIcon": "build/icons/installer.ico",
+      "uninstallerIcon": "build/icons/uninstaller.ico",
+      "uninstallDisplayName": "NobaTor Uninstaller"
+    }
   },
-  "win": {
-    "icon": "icon.ico"
-  },
-  "mac": {
-    "icon": "icon.icns"
-  },  
   "devDependencies": {
     "@electron-forge/cli": "^6.0.0",
     "@electron-forge/maker-deb": "^6.0.0",

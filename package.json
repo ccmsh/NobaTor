@@ -1,22 +1,19 @@
 {
   "name": "nobator",
   "productName": "NobaTor",
-  "version": "1.1.5",
+  "version": "1.2.0",
   "main": "main.js",
   "scripts": {
-    "start": "electron-forge start",
-    "package": "electron-forge package",
-    "make": "electron-forge make",
-    "publish": "electron-forge make --target inno && electron-forge publish"
+    "dev": "electron .",
+    "pack": "electron-builder --dir",
+    "dist": "electron-builder"
   },
   "keywords": [],
-  "author": "コカマッシュ",
-  "license": "MIT",
+  "author": "",
+  "license": "ISC",
   "description": "",
-  "config": {
-    "forge": "./forge.config.js"
-  },
   "build": {
+    "asar": false,
     "appId": "net.cocamush.nobator",
     "productName": "NobaTor",
     "files": [
@@ -25,42 +22,37 @@
       "main.js",
       "package.json"
     ],
+    "extraFiles": [
+      {
+        "from": ".env",
+        "to": ".env"
+      }
+    ],
     "directories": {
       "output": "build"
     },
-    "publish": [
-      {
-        "provider": "github",
-        "owner": "ccmsh",
-        "repo": "NobaTor"
-      }
-    ],
+    "mac": {
+      "icon": "nobazine.icns",
+      "target": [
+        "dmg"
+      ]
+    },
     "win": {
-      "icon": "icon.ico",
+      "icon": "nobazine.ico",
       "target": [
         "nsis"
       ]
     },
-    "mac": {
-      "icon": "icon.icns"
-    },
     "nsis": {
       "oneClick": false,
-      "allowToChangeInstallationDirectory": true,
-      "installerIcon": "build/icons/installer.ico",
-      "uninstallerIcon": "build/icons/uninstaller.ico",
-      "uninstallDisplayName": "NobaTor Uninstaller"
+      "allowToChangeInstallationDirectory": true
     }
   },
   "devDependencies": {
-    "@electron-forge/cli": "^6.0.0",
-    "@electron-forge/maker-deb": "^6.0.0",
-    "@electron-forge/maker-rpm": "^6.0.0",
-    "@electron-forge/maker-squirrel": "^6.0.0",
-    "@electron-forge/maker-zip": "^6.0.0",
-    "@electron-forge/publisher-github": "^6.0.0",
+    "@electron-forge/publisher-github": "^7.6.1",
     "@electron/packager": "^18.3.6",
-    "electron": "^34.0.2"
+    "electron": "^34.0.2",
+    "electron-builder": "^25.1.8"
   },
   "dependencies": {
     "axios": "^1.7.9",
@@ -68,7 +60,6 @@
     "dotenv": "^16.4.7",
     "easymde": "^2.18.1-177.0",
     "electron-prompt": "^1.7.0",
-    "electron-updater": "^6.3.9",
     "path": "^0.12.7"
   }
 }

@@ -1,5 +1,8 @@
 require("dotenv").config();
 module.exports = {
+  packagerConfig: {
+      icon: "./build/icon", // アイコン指定（拡張子なしで、Winは.ico, Macは.icns）
+  },
   rebuildConfig: {},
   makers: [
     {
@@ -7,7 +10,11 @@ module.exports = {
       config: {
         name: "NobaTor",
         authors: "コカマッシュ",
-        description: "NobaZineの記事を執筆するのに最適なエディター"
+        description: "NobaZineの記事を執筆するのに最適なエディター",
+        setupExe: "NobaTorSetup.exe", // インストーラー名
+        setupIcon: "./icon.ico", // アイコン
+        noMsi: true, // MSIインストーラーを作らない
+        shortcutName: "NobaTor", // スタートメニューのショートカット名
       },
     },
     {

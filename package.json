@@ -10,8 +10,8 @@
     "publish": "electron-forge publish"
   },
   "keywords": [],
-  "author": "",
-  "license": "ISC",
+  "author": "コカマッシュ",
+  "license": "MIT",
   "description": "",
   "config": {
     "forge": "./forge.config.js"

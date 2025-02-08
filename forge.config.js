@@ -1,14 +1,13 @@
 require("dotenv").config();
 module.exports = {
-  packagerConfig: {
-    asar: false,
-  },
   rebuildConfig: {},
   makers: [
     {
       name: "@electron-forge/maker-squirrel",
       config: {
         name: "NobaTor",
+        authors: "コカマッシュ",
+        description: "NobaZineの記事を執筆するのに最適なエディター"
       },
     },
     {
